@@ -169,6 +169,51 @@
       }
 
       /* ============================================================
+   DESIGN SWITCHER
+   ============================================================ */
+      #design-switch {
+        position: fixed;
+        top: 46px;
+        left: 22px;
+        z-index: 70;
+        display: flex;
+        gap: 6px;
+        background: rgba(9, 13, 19, 0.85);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--line-soft);
+        border-radius: 100px;
+        padding: 4px;
+      }
+      #design-switch a {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 7px 14px;
+        border-radius: 100px;
+        color: var(--muted);
+        transition: all 0.25s ease;
+      }
+      #design-switch a.active {
+        background: var(--cyan);
+        color: #03141b;
+        font-weight: 700;
+      }
+      #design-switch a:not(.active):hover {
+        color: var(--text);
+      }
+      @media (max-width: 640px) {
+        #design-switch {
+          top: 42px;
+          left: 12px;
+        }
+        #design-switch a {
+          padding: 6px 10px;
+          font-size: 10px;
+        }
+      }
+
+      /* ============================================================
    BOOT OVERLAY
    ============================================================ */
       #boot {
@@ -1124,6 +1169,12 @@
       </div>
     </div>
     <div id="progress"><i id="progressBar"></i></div>
+
+    <div id="design-switch">
+      <a href="index.html" class="active">Design 1</a>
+      <a href="design2.html">Design 2</a>
+      <a href="design3.html">Design 3</a>
+    </div>
 
     <!-- ============================================================
      SIDE CHANNEL NAV
