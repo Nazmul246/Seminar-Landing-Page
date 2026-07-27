@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>ThaiBiz360 AI & Smart Factory Portal | Seminar 2026</title>
+  <meta name="description" content="Explore ThaiBiz360's cutting-edge AI Solutions, ERP integrations, Smart IoT, and Predictive Maintenance dashboards. Access event brochures, case studies, and demo booking channels.">
+  <meta name="keywords" content="ThaiBiz360, ERP, SoundCam AI, Predictive Maintenance, Smart Factory, Industrial IoT, AI Counting, AI Vision, AI Sealing">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="ThaiBiz360 AI & Smart Factory Seminar Portal">
+  <meta property="og:description" content="Interactive landing page showcasing AI Vision, Smart Factories, ERP systems, and Industrial IoT dashboards.">
+  <meta property="og:type" content="website">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="design4style.css">
+  <link rel="stylesheet" href="style.css">
+  <style>/* ============================================================
+   DESIGN SWITCHER
+   ============================================================ */
+      #design-switch {
+        position: fixed;
+        top: 46px;
+        left: 22px;
+        z-index: 70;
+        display: flex;
+        gap: 6px;
+        background: rgba(9, 13, 19, 0.85);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--line-soft);
+        border-radius: 100px;
+        padding: 4px;
+      }
+      #design-switch a {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 7px 14px;
+        border-radius: 100px;
+        color: var(--muted);
+        transition: all 0.25s ease;
+      }
+      #design-switch a.active {
+        background: var(--cyan);
+        color: #03141b;
+        font-weight: 700;
+      }
+      #design-switch a:not(.active):hover {
+        color: var(--text);
+      }
+      @media (max-width: 640px) {
+        #design-switch {
+          top: 42px;
+          left: 12px;
+        }
+        #design-switch a {
+          padding: 6px 10px;
+          font-size: 10px;
+        }
+      }
+  </style>
+</head> 
+<body>
+     <div id="design-switch">
+      <a href="index.html" >Design 1</a>
+      <a href="design2.html">Design 2</a>
+      <a href="design3.html">Design 3</a>
+      <a href="design4.html" class="active">Design 4</a>
+    </div>
+
+  <!-- Dynamic Neural Network Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- --- HEADER --- -->
+  <header style="position: absolute; top: 0; width: 100%; padding: 2rem 0; z-index: 10;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="#" class="directory-card" style="background: transparent; border: none; padding: 0; backdrop-filter: none; gap: 0.6rem; box-shadow: none;">
+        <div class="directory-icon-wrapper" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+          <svg viewBox="0 0 24 24" style="fill: var(--accent-cyan);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+        </div>
+        <span style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.15rem; color: #fff; letter-spacing: -0.01em;">ThaiBiz360</span>
+      </a>
+      <div style="font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--accent-cyan); letter-spacing: 0.05em; background: rgba(0,242,254,0.03); border: 1px solid rgba(0, 242, 254, 0.15); padding: 0.4rem 1.1rem; border-radius: 50px; backdrop-filter: blur(5px); box-shadow: 0 0 10px rgba(0,242,254,0.1);">
+        SEMINAR • SEPT 22, 2026
+      </div>
+    </div>
+  </header>
+
+  <!-- --- HERO SECTION --- -->
+  <section class="hero container">
+    <div class="reveal" style="display: flex; flex-direction: column; align-items: center;">
+      <span class="section-badge">Seminar Portal</span>
+      <h1>One scan. <span>Eight AI systems.</span><br>Everything from today's stage.</h1>
+      <p class="hero-subtitle">
+        Welcome to the ThaiBiz360 Interactive Showroom. Access demo channels, live dashboard telemetry, and system brochures directly from your tabletop.
+      </p>
+    </div>
+
+    <!-- Live Event Countdown -->
+    <div class="countdown-container reveal" id="countdown-wrapper">
+      <div class="countdown-box">
+        <span class="countdown-num" id="cd-days">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cd-hours">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cd-mins">00</span>
+        <span class="countdown-label">Mins</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cd-secs">00</span>
+        <span class="countdown-label">Secs</span>
+      </div>
+    </div>
+
+    <div class="hero-cta reveal">
+      <a href="#directory" class="btn btn-primary">
+        Browse Directory
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+      <a href="#booking" class="btn btn-secondary">Request Demo</a>
+    </div>
+  </section>
+
+  <!-- --- QUICK DIRECTORY --- -->
+  <section id="directory" class="directory-section container reveal">
+    <div style="margin-bottom: 2.5rem; text-align: center;">
+      <span class="section-badge" style="color: var(--accent-indigo); border-color: rgba(99, 102, 241, 0.15); background: rgba(99, 102, 241, 0.03);">Quick Navigation</span>
+      <h2 style="font-size: 1.75rem; font-weight: 700; margin-top: 0.25rem;">Eight systems. One factory floor.</h2>
+    </div>
+
+    <div class="directory-grid">
+      <!-- 1 -->
+      <a href="#sol-erp" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>ThaiBiz360 ERP</h4>
+          <p>Enterprise ERP Core</p>
+        </div>
+      </a>
+      <!-- 2 -->
+      <a href="#sol-soundcam" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>SoundCam AI</h4>
+          <p>Acoustic Anomaly Mapping</p>
+        </div>
+      </a>
+      <!-- 3 -->
+      <a href="#sol-counting" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H9v-2h2v2zm0-4H9v-2h2v2zm0-4H9V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>AI Counting System</h4>
+          <p>High-Speed Flow Counting</p>
+        </div>
+      </a>
+      <!-- 4 -->
+      <a href="#sol-vision" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>AI Vision Inspection</h4>
+          <p>Conveyor Defect Sorter</p>
+        </div>
+      </a>
+      <!-- 5 -->
+      <a href="#sol-sealing" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>AI Sealing Inspection</h4>
+          <p>Thermo Leak Detector</p>
+        </div>
+      </a>
+      <!-- 6 -->
+      <a href="#sol-maintenance" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>Predictive Maintenance</h4>
+          <p>Machine Lifetime Sensor</p>
+        </div>
+      </a>
+      <!-- 7 -->
+      <a href="#sol-dashboard" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M10 20h4v-4h-4v4zm6-10v10h4V10h-4zM6 4v16h4V4H6z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>Smart Factory</h4>
+          <p>OEE Telemetry Grid</p>
+        </div>
+      </a>
+      <!-- 8 -->
+      <a href="#sol-iot" class="directory-card">
+        <div class="directory-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <div class="directory-info">
+          <h4>Industrial IoT</h4>
+          <p>Multi-Sensor OPC Mesh</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- --- 8 SECTIONS SHOWCASE --- -->
+
+  <!-- 1. ThaiBiz360 ERP -->
+  <section id="sol-erp" class="showcase-section showcase-cat-enterprise container reveal">
+    <div class="section-glow glow-cyan"></div>
+    <div class="showcase-row">
+      <div class="text-col">
+        <span class="showcase-tag">ERP SYSTEM</span>
+        <h2 class="showcase-title">Run the whole business<br>from one screen.</h2>
+        <p class="showcase-desc">
+          ThaiBiz360 ERP consolidates production queues, supplier logistics, dynamic inventories, double-entry accounting, and sales tracking into a central real-time database. Eliminate department lag and streamline operational cycles.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-cyan play-video-btn" data-video-type="local" data-video-src="erp_demo" data-title="ThaiBiz360 ERP Demo">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Demo
+          </button>
+          <button class="btn btn-secondary view-doc-btn" data-doc="erp_brochure">Brochure</button>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-erp"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SoundCam AI -->
+  <section id="sol-soundcam" class="showcase-section showcase-cat-ai-vision container reveal">
+    <div class="section-glow glow-purple"></div>
+    <div class="showcase-row reverse">
+      <div class="text-col">
+        <span class="showcase-tag">ACOUSTIC AI</span>
+        <h2 class="showcase-title">Hear a compressor failing<br>before it fails.</h2>
+        <p class="showcase-desc">
+          Using multi-channel acoustic sensor grids, SoundCam AI maps real-time noise profiles. Detect micro-leaks, valve defects, and mechanical friction locations weeks before failure warnings show on standard gauges.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-purple play-video-btn" data-video-type="local" data-video-src="soundcam_demo" data-title="SoundCam AI - Compressor Anomaly Detection">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Demo
+          </button>
+          <button class="btn btn-secondary view-doc-btn" data-doc="soundcam_case">Case Study</button>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-soundcam"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. AI Counting System -->
+  <section id="sol-counting" class="showcase-section showcase-cat-ai-vision container reveal">
+    <div class="section-glow glow-indigo"></div>
+    <div class="showcase-row">
+      <div class="text-col">
+        <span class="showcase-tag">COMPUTER VISION</span>
+        <h2 class="showcase-title">Every unit counted.<br>Zero manual tally.</h2>
+        <p class="showcase-desc">
+          High-frequency optical recognition tracking packaging feeds. Instantly log batch quantities and prevent inventory mistakes during high-speed conveyor line throughput.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-purple play-video-btn" data-video-type="local" data-video-src="counting_demo" data-title="AI Counting System - Introductory Video">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-counting"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. AI Vision Inspection -->
+  <section id="sol-vision" class="showcase-section showcase-cat-ai-vision container reveal">
+    <div class="section-glow glow-purple"></div>
+    <div class="showcase-row reverse">
+      <div class="text-col">
+        <span class="showcase-tag">DEFECT SORTING</span>
+        <h2 class="showcase-title">Catch the defect the human<br>eye blinks past.</h2>
+        <p class="showcase-desc">
+          Identify structural cracks, component misalignment, and layout anomalies within milliseconds. Deep learning sorting networks ensure 99.9% inspection quality directly on the conveyor.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-purple play-video-btn" data-video-type="local" data-video-src="vision_inspection_demo" data-title="AI Vision Inspection Overview">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-vision"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. AI Sealing Inspection -->
+  <section id="sol-sealing" class="showcase-section showcase-cat-ai-vision container reveal">
+    <div class="section-glow glow-cyan"></div>
+    <div class="showcase-row">
+      <div class="text-col">
+        <span class="showcase-tag">QUALITY CONTROL</span>
+        <h2 class="showcase-title">Confirm every seal,<br>before it leaves the line.</h2>
+        <p class="showcase-desc">
+          Thermography and machine vision check heat sealing integrity on packaging foils and boxes. Prevent product leakage, vacuum breakdown, and logistics contamination.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-purple play-video-btn" data-video-type="local" data-video-src="sealing_demo" data-title="AI Sealing Inspection Overview">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-sealing"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Predictive Maintenance -->
+  <section id="sol-maintenance" class="showcase-section showcase-cat-smart-factory container reveal">
+    <div class="section-glow glow-emerald"></div>
+    <div class="showcase-row reverse">
+      <div class="text-col">
+        <span class="showcase-tag">AI DIAGNOSTICS</span>
+        <h2 class="showcase-title">Know which machine needs you<br>next week — not next breakdown.</h2>
+        <p class="showcase-desc">
+          Predictive algorithms calculate machine Remaining Useful Life (RUL). Anticipate equipment maintenance targets, avoid unplanned line downtime, and coordinate factory technicians.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-emerald play-video-btn" data-video-type="youtube" data-video-src="hD4L8gQ4m7c" data-title="Predictive Maintenance Technologies Overview">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Video
+          </button>
+          <a href="https://demo.tb360.io/maintenance" class="btn btn-secondary" target="_blank" rel="noopener">
+            Dashboard Demo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-maintenance"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Smart Factory Dashboard -->
+  <section id="sol-dashboard" class="showcase-section showcase-cat-smart-factory container reveal">
+    <div class="section-glow glow-cyan"></div>
+    <div class="showcase-row">
+      <div class="text-col">
+        <span class="showcase-tag">ENTERPRISE OEE</span>
+        <h2 class="showcase-title">Your whole factory floor,<br>on one live screen.</h2>
+        <p class="showcase-desc">
+          Consolidate overall equipment effectiveness (OEE), hourly production rates, scrap metrics, and shipping lines under a centralized control interface.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-emerald play-video-btn" data-video-type="youtube" data-video-src="83xWJ8uE2bY" data-title="Smart Factory Dashboard Demo">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Video
+          </button>
+          <a href="https://demo.tb360.io/factory" class="btn btn-secondary" target="_blank" rel="noopener">
+            Dashboard Demo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-dashboard"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Industrial IoT -->
+  <section id="sol-iot" class="showcase-section showcase-cat-smart-factory container reveal">
+    <div class="section-glow glow-emerald"></div>
+    <div class="showcase-row reverse">
+      <div class="text-col">
+        <span class="showcase-tag">IOT MESH</span>
+        <h2 class="showcase-title">Every sensor talking.<br>Every signal logged.</h2>
+        <p class="showcase-desc">
+          Connect old and new machines with OPC UA, Modbus, and MQTT frameworks. Capture real-time pressure, voltage, temperature, and speed signals instantly.
+        </p>
+        <div class="showcase-actions">
+          <button class="btn btn-primary btn-cat-emerald play-video-btn" data-video-type="youtube" data-video-src="HdbW7D6rMTo" data-title="Industrial IoT & Sensor Integration">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Video
+          </button>
+          <a href="https://demo.tb360.io/iot" class="btn btn-secondary" target="_blank" rel="noopener">
+            Dashboard Demo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="visual-col">
+        <div class="visual-panel">
+          <canvas id="canvas-iot"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- BOOKING & CONTACTS --- -->
+  <section id="booking" class="contact-booking container">
+    <div class="section-glow glow-indigo"></div>
+    <div class="contact-layout">
+      
+      <!-- Interactive Booking Card -->
+      <div class="booking-card reveal">
+        <span class="showcase-tag">DEMO RESERVATION</span>
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Seen enough? Let's put it on your line.</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">Request a customized evaluation for your production facility.</p>
+        
+        <!-- Successful submission alert -->
+        <div class="booking-success-msg" id="booking-success">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <div>
+            <strong style="display: block; margin-bottom: 0.25rem;">Demo Slot Requested!</strong>
+            Our industrial automation team will reach out shortly to coordinate details.
+          </div>
+        </div>
+
+        <form id="booking-form" novalidate>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Corporate Email</label>
+              <input type="email" id="form-email" class="form-input" placeholder="john@company.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="form-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="form-phone" class="form-input" placeholder="+66 81 234 5678" required>
+            </div>
+            <div class="form-group">
+              <label for="form-company" class="form-label">Company Name</label>
+              <input type="text" id="form-company" class="form-input" placeholder="Factory Co., Ltd." required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form-msg" class="form-label">Production Challenges / Interest</label>
+            <textarea id="form-msg" class="form-input" placeholder="Specify which systems you would like to test..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Demo Request</button>
+        </form>
+      </div>
+
+      <!-- Contact Sidebar -->
+      <div class="contact-sidebar reveal">
+        
+        <!-- Channels list -->
+        <div class="contact-info-card">
+          <h3 style="font-family: 'Outfit'; font-size: 1.15rem; margin-bottom: 1.25rem;">Corporate Channels</h3>
+          <div class="contact-channels">
+            <a href="https://line.me/ti/p/~@thaibiz360" class="contact-btn btn-line" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 5.58 2 10c0 3.01 2.25 5.56 5.34 6.78l-1.07 4c-.11.41.27.76.67.62l4.89-2.73c.48.06.97.09 1.47.09 5.52 0 10-3.58 10-8s-4.48-8-10-8zm-4.7 11.23h-1c-.41 0-.75-.34-.75-.75v-3.96c0-.41.34-.75.75-.75h1c.41 0 .75.34.75.75v3.96c0 .41-.34.75-.75.75zm3.17 0h-1c-.41 0-.75-.34-.75-.75V7.77c0-.41.34-.75.75-.75h1c.41 0 .75.34.75.75V12.48c0 .41-.34.75-.75.75zm3.43 0h-1c-.41 0-.75-.34-.75-.75v-3.96c0-.41.34-.75.75-.75h1c.41 0 .75.34.75.75v3.96c0 .41-.34.75-.75.75zm3.1 0H16c-.41 0-.75-.34-.75-.75V7.77c0-.41.34-.75.75-.75h1c.41 0 .75.34.75.75v3.96c0 .41-.34.75-.75.75z"/>
+              </svg>
+              LINE: @thaibiz360
+            </a>
+            <a href="mailto:info@thaibiz360.com" class="contact-btn btn-email">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              info@thaibiz360.com
+            </a>
+            <a href="https://www.thaibiz360.com" class="contact-btn btn-web" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+              www.thaibiz360.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Scan Badge -->
+        <div class="event-details-card">
+          <div class="qr-placeholder">
+            <svg viewBox="0 0 100 100" width="100%" height="100%">
+              <rect x="5" y="5" width="90" height="90" rx="6" fill="none" stroke="#6366f1" stroke-width="2"/>
+              <rect x="12" y="12" width="22" height="22" fill="#030306" stroke="#07070c" stroke-width="1"/>
+              <rect x="15" y="15" width="16" height="16" fill="none" stroke="#00f2fe" stroke-width="3"/>
+              <rect x="19" y="19" width="8" height="8" fill="#6366f1" rx="1"/>
+              <rect x="66" y="12" width="22" height="22" fill="#030306" stroke="#07070c" stroke-width="1"/>
+              <rect x="69" y="69" width="16" height="16" fill="none" stroke="#00f2fe" stroke-width="3"/>
+              <rect x="73" y="73" width="8" height="8" fill="#6366f1" rx="1"/>
+              <rect x="12" y="66" width="22" height="22" fill="#030306" stroke="#07070c" stroke-width="1"/>
+              <rect x="15" y="69" width="16" height="16" fill="none" stroke="#00f2fe" stroke-width="3"/>
+              <rect x="19" y="73" width="8" height="8" fill="#6366f1" rx="1"/>
+              <rect x="42" y="15" width="4" height="4" fill="#00f2fe"/>
+              <rect x="48" y="15" width="8" height="4" fill="#6366f1"/>
+              <rect x="58" y="15" width="4" height="8" fill="#00f2fe"/>
+              <rect x="42" y="24" width="12" height="4" fill="#00f2fe"/>
+              <rect x="58" y="28" width="4" height="4" fill="#6366f1"/>
+              <rect x="42" y="32" width="4" height="8" fill="#6366f1"/>
+              <rect x="50" y="32" width="8" height="4" fill="#00f2fe"/>
+              <rect x="15" y="42" width="8" height="4" fill="#6366f1"/>
+              <rect x="27" y="42" width="4" height="12" fill="#00f2fe"/>
+              <rect x="35" y="42" width="8" height="4" fill="#00f2fe"/>
+              <rect x="47" y="42" width="4" height="4" fill="#6366f1"/>
+              <rect x="55" y="42" width="12" height="8" fill="#00f2fe"/>
+              <rect x="15" y="50" width="4" height="4" fill="#00f2fe"/>
+              <rect x="23" y="50" width="8" height="4" fill="#6366f1"/>
+              <rect x="35" y="50" width="4" height="8" fill="#6366f1"/>
+              <rect x="45" y="50" width="8" height="4" fill="#00f2fe"/>
+              <rect x="73" y="42" width="4" height="8" fill="#6366f1"/>
+              <rect x="81" y="42" width="8" height="4" fill="#00f2fe"/>
+              <rect x="73" y="54" width="12" height="4" fill="#00f2fe"/>
+              <rect x="69" y="60" width="4" height="4" fill="#6366f1"/>
+              <rect x="42" y="60" width="4" height="8" fill="#00f2fe"/>
+              <rect x="50" y="60" width="12" height="6366f1"/>
+              <rect x="42" y="72" width="8" height="4" fill="#6366f1"/>
+              <rect x="54" y="68" width="4" height="16" fill="#00f2fe"/>
+              <rect x="42" y="80" width="8" height="4" fill="#00f2fe"/>
+              <rect x="62" y="72" width="4" height="4" fill="#6366f1"/>
+              <rect x="62" y="80" width="12" height="4" fill="#00f2fe"/>
+            </svg>
+          </div>
+          <p>Scan to keep this showroom on your phone. Access demo videos and brochures anytime during or after the seminar.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ThaiBiz360 Company Limited. All rights reserved.</p>
+      <p style="font-size: 0.72rem; margin-top: 0.25rem;">Designed for tabletop QR seminar interactions. High compatibility viewport stack.</p>
+    </div>
+  </footer>
+
+  <!-- --- MODALS --- -->
+
+  <!-- Video Modal -->
+  <div class="modal-overlay" id="video-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="video-modal-title">Watch Demo</h3>
+        <button class="modal-close-btn" id="video-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="video-wrapper">
+          <div id="video-player-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Modal -->
+  <div class="modal-overlay" id="doc-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="doc-modal-title">Product Brochure</h3>
+        <button class="modal-close-btn" id="doc-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="doc-viewer-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="design4.js"></script>
+</body>
+</html>
